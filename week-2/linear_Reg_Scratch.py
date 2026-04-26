@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+
+
 def linear_regression(x, y):
     n = len(x)
     
@@ -20,8 +23,14 @@ def linear_regression(x, y):
     
     return m, b
 
-cgpa = [7, 8, 6.5, 7, 9]
+cgpa = [7, 8, 6.5, 8.5, 9]
 ctc = [20, 30, 50, 40, 50]
+
+plt.scatter(cgpa, ctc, color='blue', label='Data Points')
+plt.xlabel('CGPA')
+plt.ylabel('CTC')
+plt.title('CGPA vs CTC')
+plt.show()
 
 m, b = linear_regression(cgpa, ctc)
 
